@@ -1,3 +1,76 @@
-/landing-page/landing-page/style.css
+/* Apply box-sizing rule to all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-/* This file is intentionally left blank. */
+/* Set base font styles */
+body {
+    font-family: 'Arial', sans-serif; /* Replace with your preferred font stack */
+    font-size: 16px; /* Base font size */
+    line-height: 1.5; /* Improved readability */
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+}
+
+/* Define CSS variables for color palette */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    --primary-text-color: #333;
+    --background-color: #f8f9fa;
+}
+
+/* Apply font sizes for headings */
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem; /* Add some space after paragraphs */
+}
+
+/* Default margins and padding */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic link styling */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional global styles */
+.container {
+    padding: 16px; /* Example of consistent spacing */
+}
