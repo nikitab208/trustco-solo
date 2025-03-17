@@ -1,76 +1,194 @@
 /* Apply box-sizing rule to all elements */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Set base font styles */
 body {
-    font-family: 'Arial', sans-serif; /* Replace with your preferred font stack */
-    font-size: 16px; /* Base font size */
-    line-height: 1.5; /* Improved readability */
-    color: var(--primary-text-color);
-    background-color: var(--background-color);
+  font-family: "Arial", sans-serif; /* Replace with your preferred font stack */
+  font-size: 16px; /* Base font size */
+  line-height: 1.5; /* Improved readability */
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
 }
 
 /* Define CSS variables for color palette */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --accent-color: #28a745;
-    --primary-text-color: #333;
-    --background-color: #f8f9fa;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --accent-color: #28a745;
+  --primary-text-color: #333;
+  --background-color: #f8f9fa;
 }
 
 /* Apply font sizes for headings */
 h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.75rem;
+  font-size: 1.75rem;
 }
 
 h4 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h5 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 h6 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 /* Paragraph styling */
 p {
-    font-size: 1rem;
-    margin-bottom: 1rem; /* Add some space after paragraphs */
+  font-size: 1rem;
+  margin-bottom: 1rem; /* Add some space after paragraphs */
 }
 
 /* Default margins and padding */
-body, h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 /* Basic link styling */
 a {
-    color: var(--primary-color);
-    text-decoration: none;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Additional global styles */
 .container {
-    padding: 16px; /* Example of consistent spacing */
+  padding: 16px; /* Example of consistent spacing */
+}
+
+.navbar {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between logo and menu */
+  align-items: center; /* Center items vertically */
+  background-color: #f2f5f6; /* Background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding around the navbar */
+}
+
+.logo img {
+  max-width: 100px; /* Set a max width for the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.nav ul {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Display menu items in a row */
+  transition: max-height 0.3s ease-out; /* Smooth slide down transition */
+  max-height: none; /* Show the menu by default */
+  overflow: visible; /* Show overflow */
+}
+.nav ul.active {
+  max-height: 500px; /* Adjust this value as needed */
+}
+
+.nav li {
+  margin: 0 15px; /* Space between menu items */
+}
+
+.nav a {
+  color: black; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 18px; /* Font size */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav a:hover {
+  color: #ff6347; /* Change color on hover */
+}
+
+.auth-buttons {
+  display: flex; /* Align buttons in a row */
+}
+
+.btn {
+  background-color: #ff6347; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding inside buttons */
+  margin-right: 10px; /* Space between buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 50px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+.btn:hover {
+  background-color: #e5533d; /* Darker shade on hover */
+}
+.image-container {
+  width: 100%; /* Full width */
+  background-color: #f2f5f6;
+  overflow: hidden; /* Hide overflow */
+  padding: 20px 0;
+}
+
+.fullsize-image {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom space */
+}
+.hamburger {
+  display: none; /* Hide hamburger by default */
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .nav {
+    width: 100%; /* Full width for nav */
+    text-align: center; /* Center the menu */
+    margin: 10px 0; /* Space above and below the menu */
+  }
+
+  .nav ul {
+    display: block; /* Stack menu items vertically */
+    max-height: 0;
+    overflow: hidden;
+  }
+  .nav ul.active {
+    max-height: 500px; /* Adjust this value as needed */
+  }
+
+  .nav li {
+    margin: 10px 0; /* Space between menu items */
+  }
+
+  .auth-buttons {
+    width: 100%; /* Full width for buttons */
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 10px; /* Space above buttons */
+  }
+  .hamburger {
+    display: block; /* Show hamburger in mobile view */
+    color: black;
+    position: absolute; /* Position hamburger */
+    top: 10px; /* Adjust top position as needed */
+    right: 20px; /* Align to the right */
+  }
 }
