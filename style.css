@@ -206,6 +206,75 @@ a:hover {
 .brand-names img[src*="Amazon.svg"] {
   margin-top: 10px; /* Adjust value as needed */
 }
+.video-section {
+  background-color: #043a53;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 80px;
+  height: 100vh; /* Full screen height */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Top Section: Title & Paragraph */
+.video-header {
+  display: flex;
+  justify-content: space-between; /* Ensures title on left, paragraph on right */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Title styles */
+.video-header h1 {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  flex: 1; /* Takes available space */
+  text-align: left;
+}
+
+/* Paragraph styles */
+.video-header p {
+  color: #ffffff;
+  font-size: 18px;
+  max-width: 450px;
+  text-align: right; /* Keeps text aligned to the right */
+  line-height: 1.6; /* Improves readability */
+  margin: 0;
+  flex: 1;
+  direction: ltr; /* Ensures left-to-right flow */
+  unicode-bidi: normal; /* Prevents unwanted mirroring */
+  white-space: normal; /* Allows text to wrap naturally */
+  word-break: normal; /* Avoids breaking words unnaturally */
+  overflow-wrap: anywhere; /* Ensures words wrap properly without big gaps */
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.yellow-text {
+  color: #f0b73f;
+}
+
+/* Video Image */
+.video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+.video-container img {
+  max-width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Stack items vertically */
@@ -281,5 +350,74 @@ a:hover {
   .brand-names img[src*="Atlassian.svg"],
   .brand-names img[src*="Walmart.svg"] {
     width: 90px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .video-section {
+    padding: 40px 60px;
+  }
+
+  .video-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .video-header h1,
+  .video-header p {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .video-container img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    padding: 30px 40px;
+  }
+
+  .video-header {
+    flex-direction: column;
+  }
+
+  .video-header h1 {
+    font-size: 32px;
+  }
+
+  .video-header p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .video-container img {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section {
+    padding: 20px;
+  }
+
+  .video-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .video-header h1 {
+    font-size: 26px;
+  }
+
+  .video-header p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .video-container img {
+    max-width: 100%;
   }
 }
