@@ -154,6 +154,58 @@ a:hover {
 .hamburger {
   display: none; /* Hide hamburger by default */
 }
+/* Trusted By Section */
+.trusted-section {
+  background-color: white;
+  padding: 50px 0; /* Increased padding for broader height */
+  width: 100%; /* Ensure full width */
+}
+
+.trusted-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.trusted-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000; /* Lighter black */
+  white-space: nowrap;
+}
+
+.brand-names {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Adjust space between logos */
+  flex-grow: 1;
+}
+
+.brand-names span {
+  display: flex;
+  align-items: center;
+  font-size: 22px; /* Bigger font */
+  font-weight: 900; /* Extra bold */
+  color: #787878; /* Dark grey */
+  gap: 8px; /* Space between text and logo */
+}
+
+.brand-names img {
+  width: 100px; /* Adjust this value as needed */
+  height: auto; /* Keeps proportions */
+  object-fit: contain;
+}
+
+.brand-names img[src*="Atlassian.svg"],
+.brand-names img[src*="Walmart.svg"] {
+  width: 140px; /* Make these logos slightly larger */
+}
+
+.brand-names img[src*="Amazon.svg"] {
+  margin-top: 10px; /* Adjust value as needed */
+}
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Stack items vertically */
@@ -190,5 +242,44 @@ a:hover {
     position: absolute; /* Position hamburger */
     top: 10px; /* Adjust top position as needed */
     right: 20px; /* Align to the right */
+  }
+}
+
+@media (max-width: 768px) {
+  .trusted-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .trusted-text {
+    font-size: 12px;
+  }
+
+  .brand-names {
+    gap: 15px;
+  }
+
+  .brand-names img {
+    width: 70px;
+  }
+
+  .brand-names img[src*="Atlassian.svg"],
+  .brand-names img[src*="Walmart.svg"] {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trusted-text {
+    font-size: 10px;
+  }
+
+  .brand-names img {
+    width: 60px;
+  }
+
+  .brand-names img[src*="Atlassian.svg"],
+  .brand-names img[src*="Walmart.svg"] {
+    width: 90px;
   }
 }
