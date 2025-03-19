@@ -441,6 +441,37 @@ a:hover {
   font-size: 20px;
 }
 
+/* Numbers Section */
+#numbers {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Numbers Layout */
+.numbers-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Number Text */
+.number-item {
+  text-align: center;
+}
+
+.number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #043a53; /* Blue color */
+  display: block;
+}
+
+.number-item p {
+  font-size: 20px;
+  color: #404040;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Stack items vertically */
@@ -669,5 +700,28 @@ a:hover {
   .view-reports {
     padding: 10px 20px;
     font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .numbers-container {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .number {
+    font-size: 36px;
+  }
+
+  .number-item p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .numbers-container {
+    flex-direction: column;
+    align-items: center;
   }
 }
