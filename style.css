@@ -275,6 +275,87 @@ a:hover {
   object-fit: cover;
 }
 
+/* Beneficial Section */
+.beneficial-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.beneficial-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Left Side */
+.beneficial-left {
+  flex: 1;
+}
+
+.beneficial-btn {
+  background-color: #043a53;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.beneficial-left h1 {
+  font-size: 32px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.beneficial-left p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Right Side - Cards */
+.beneficial-cards {
+  display: flex;
+  flex: 2;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: left;
+  position: relative; /* Ensures positioning works properly */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+}
+
+/* Card Icons */
+.card-icon {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 10px; /* Adds space between image and text */
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 22px;
+  color: #666;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Stack items vertically */
@@ -419,5 +500,38 @@ a:hover {
 
   .video-container img {
     max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .beneficial-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .beneficial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .beneficial-left h1 {
+    font-size: 24px;
+  }
+
+  .beneficial-left p {
+    font-size: 12px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 12px;
   }
 }
