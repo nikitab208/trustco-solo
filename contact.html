@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Title</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="./assets/Trustco-Logo.png" alt="Logo" />
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#company">Company</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <button class="btn">Login</button>
+        <button class="btn">Signup</button>
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </header>
+
+    <section class="contact-section">
+      <h2 class="contact-title">We are here to help</h2>
+      <p class="contact-description">
+        Contact us if you have any questions about our company. Our best team
+        will provide your answer within a few hours.
+      </p>
+
+      <div class="contact-cards">
+        <!-- Email Card -->
+        <div class="contact-card">
+          <img src="./assets/Email.png" alt="Email Icon" class="contact-icon" />
+          <h3 class="contact-card-title">Email Us</h3>
+          <p class="contact-card-text">
+            Ask anything by emailing us and we will respond within a few days.
+          </p>
+          <a href="mailto:support@example.com" class="contact-link">
+            Send Email →
+          </a>
+        </div>
+
+        <!-- Call Card -->
+        <div class="contact-card">
+          <img
+            src="./assets/Location.png"
+            alt="Location Icon"
+            class="contact-icon"
+          />
+          <h3 class="contact-card-title">Drop In</h3>
+          <p class="contact-card-text">
+            You can meet us at our office and discuss the details of your
+            questions.
+          </p>
+          <a href="#" class="contact-link"> Get Direction → </a>
+        </div>
+
+        <!-- Live Chat Card -->
+        <div class="contact-card">
+          <img src="./assets/Call.png" alt="Call Icon" class="contact-icon" />
+          <h3 class="contact-card-title">Call Us</h3>
+          <p class="contact-card-text">
+            Call us if your question requiers an response.
+          </p>
+          <a href="tel:+1234567890" class="contact-link"> +1234567890 → </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <h2 class="form-title">Leave us a message</h2>
+      <p class="form-description">
+        Contact us if you have any questions about our company. Our best team
+        will provide your answer within a few hours.
+      </p>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <div class="input-box">
+            <img
+              src="./assets/Profile-Icon.png"
+              alt="Profile Icon"
+              class="input-icon"
+            />
+            <input type="text" placeholder="Name" />
+          </div>
+          <div class="input-box">
+            <img
+              src="./assets/Mail-Icon.png"
+              alt="Email Icon"
+              class="input-icon"
+            />
+            <input type="email" placeholder="Email Address" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-box">
+            <img
+              src="./assets/Company-Icon.png"
+              alt="Company Icon"
+              class="input-icon"
+            />
+            <input type="text" placeholder="Company Name" />
+          </div>
+          <div class="input-box">
+            <img
+              src="./assets/Contact-Icon.png"
+              alt="Contact Icon"
+              class="input-icon"
+            />
+            <input type="tel" placeholder="Contact Number" />
+          </div>
+        </div>
+
+        <div class="textarea-box">
+          <textarea placeholder="How we can help?"></textarea>
+        </div>
+
+        <div class="form-bottom">
+          <label class="checkbox-container">
+            <input type="checkbox" checked />
+            <span class="checkbox-text">I agree with the</span>
+            <a href="#" class="terms-link">Terms & Conditions</a>
+          </label>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section: Logo & Social Icons -->
+        <div class="footer-left">
+          <img
+            src="./assets/Trustco-Logo.png"
+            alt="Company Logo"
+            class="footer-logo"
+          />
+          <div class="footer-social">
+            <img src="./assets/Trustco-Icon-1.png" alt="Facebook" />
+            <img src="./assets/Trustco-Icon-2.png" alt="Instagram" />
+            <img src="./assets/Trustco-Icon-3.jpg" alt="YouTube" />
+          </div>
+        </div>
+
+        <!-- Center Section: Description -->
+        <div class="footer-center">
+          <p class="footer-description">
+            An awesome & powerful tool for your business, <br />
+            increasing business revenue. With evaluating in <br />
+            depth variety of data sets and including the speed <br />
+            of tech adaptation, we can build bridges between <br />
+            any companies and their customers.
+          </p>
+        </div>
+
+        <!-- Right Section: Lists -->
+        <div class="footer-right">
+          <ul class="footer-list">
+            <li class="highlight">Home</li>
+            <li>Features</li>
+            <li>Solutions</li>
+            <li>Resources</li>
+            <li>Pricing</li>
+          </ul>
+          <ul class="footer-list">
+            <li class="highlight">About Us</li>
+            <li>Company</li>
+            <li>Contact</li>
+            <li>Career</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <footer class="site-credits">
+      <div class="credits-container">
+        <!-- Left Side: Copyright -->
+        <div class="credits-left">
+          <p>© <span id="currentYear"></span> Trustco.</p>
+        </div>
+
+        <!-- Center: Terms and Policies (Plain Text) -->
+        <div class="credits-center">
+          <span class="highlight">Terms of Service</span>
+          <span>Privacy Policy</span>
+          <span>Language</span>
+        </div>
+
+        <!-- Right Side: Language Selector -->
+        <div class="credits-right">
+          <img src="./assets/global-line.png" alt="Global" class="icon" />
+          <span>English</span>
+          <img
+            src="./assets/Language-Selector.png"
+            alt="Language Selector"
+            class="icon"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
+</html>
