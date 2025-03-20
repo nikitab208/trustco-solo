@@ -862,6 +862,143 @@ a:hover {
   border-radius: 10px;
 }
 
+/* Footer Styling */
+.footer {
+  background-color: #f2f5f6;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 60px; /* Added spacing */
+}
+
+/* Left Section */
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Center Section */
+.footer-center {
+  flex: 2;
+  min-width: 350px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-description {
+  color: #404040;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Right Section (Lists) */
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px; /* More space between lists */
+  min-width: 300px;
+}
+
+/* List Styling */
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #404040; /* Default color */
+}
+
+/* Home & About Us should be darker */
+.footer-list .highlight {
+  color: #12141d;
+  font-weight: bold;
+}
+
+/* Site Credits Section */
+.site-credits {
+  background-color: #f2f5f6;
+  padding: 15px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #404040;
+}
+
+.credits-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+/* Left: Copyright */
+.credits-left {
+  flex: 1;
+  min-width: 150px;
+  text-align: left;
+}
+
+/* Center: Keep Terms in One Line */
+.credits-center {
+  flex: 2;
+  text-align: center;
+  min-width: 300px;
+  white-space: nowrap; /* Ensures text stays in one line */
+}
+
+.credits-center span {
+  color: #404040;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+.credits-center .highlight {
+  color: #404040;
+}
+
+/* Right: Language Selector */
+.credits-right {
+  flex: 1;
+  text-align: right;
+  min-width: 150px;
+}
+
+.credits-right .icon {
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Stack items vertically */
@@ -1369,5 +1506,121 @@ a:hover {
 
   .cta-image img {
     max-width: 100%;
+  }
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .footer-right {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-right {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 428px) {
+  .footer-container {
+    gap: 50px;
+  }
+
+  .footer-left {
+    margin-bottom: 25px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-social img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-description {
+    font-size: 14px;
+  }
+
+  .footer-list li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .credits-container {
+    padding: 0 40px;
+  }
+
+  .credits-center span {
+    margin: 0 10px;
+    font-size: 13px;
+  }
+
+  .credits-right .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Responsive Design for Tablets & Small Screens (768px) */
+@media (max-width: 768px) {
+  .credits-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .credits-left,
+  .credits-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .credits-center {
+    display: inline-block; /* Ensures text stays in one line */
+    white-space: nowrap; /* Prevents wrapping */
+  }
+}
+
+/* Responsive Design for Mobile Screens (480px) */
+@media (max-width: 480px) {
+  .credits-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .credits-left,
+  .credits-right {
+    width: 100%;
+  }
+
+  .credits-center {
+    display: inline-block; /* Keeps text in one line */
+    white-space: nowrap;
+  }
+
+  .credits-center span {
+    font-size: 13px;
+  }
+
+  .credits-right .icon {
+    width: 14px;
+    height: 14px;
   }
 }
